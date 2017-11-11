@@ -1,5 +1,4 @@
-
-package figuras;
+package figura;
 
 /**
  *
