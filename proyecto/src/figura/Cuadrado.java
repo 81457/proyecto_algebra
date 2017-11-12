@@ -2,8 +2,10 @@ package figura;
 
 /**
  *
- * @author Jorge A
+ * @Autor Jorge A
+ *
  */
+
 public class Cuadrado {
     
 }
