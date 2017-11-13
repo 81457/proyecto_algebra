@@ -23,13 +23,16 @@ public class Main {
             System.out.println("B.- 4 Puntos.");
             System.out.println("C.- Salir.");
             System.out.println("-------------------------------------------");
+            System.out.println("Al ingresar coordenadas no olvide la coma.");
+            System.out.println("Ejemplo: [1,5]");
+            System.out.println("-------------------------------------------");
             System.out.print("Ingrese su opción: ");
             String opc = leer.nextLine();
             System.out.println("-------------------------------------------");
 
             
             if (opc.equalsIgnoreCase("A")) {
-                System.out.print("Ingrese las coordenadas de A: ");
+                System.out.print("Ingrese las coordenadas de A [x,y]: ");
                 
                 String crdA = leer.nextLine();
                 String[] lugarA = crdA.split(",");
@@ -37,7 +40,7 @@ public class Main {
                 int crdAx = Integer.parseInt(lugarA[0]);
                 int crdAy = Integer.parseInt(lugarA[1]);
                 
-                System.out.print("Ingrese las coordenadas de B: ");
+                System.out.print("Ingrese las coordenadas de B [x,y]: ");
                 
                 String crdB = leer.nextLine();
                 String[] lugarB = crdB.split(",");
@@ -45,7 +48,7 @@ public class Main {
                 int crdBx = Integer.parseInt(lugarB[0]);
                 int crdBy = Integer.parseInt(lugarB[1]);
                 
-                System.out.print("Ingrese las coordenadas de C: ");
+                System.out.print("Ingrese las coordenadas de C [x,y]: ");
                 
                 String crdC = leer.nextLine();
                 String[] lugarC = crdC.split(",");
@@ -68,7 +71,7 @@ public class Main {
 
                 if (opc.equalsIgnoreCase("B")) {
                       
-                    System.out.print("Ingrese las coordenadas de A: ");
+                    System.out.print("Ingrese las coordenadas de A [x,y]: ");
                     
                     String crdA = leer.nextLine();
                     String[] lugarA = crdA.split(",");
@@ -76,7 +79,7 @@ public class Main {
                     int crdAx = Integer.parseInt(lugarA[0]);
                     int crdAy = Integer.parseInt(lugarA[1]);
                     
-                    System.out.print("Ingrese las coordenadas de B: ");
+                    System.out.print("Ingrese las coordenadas de B [x,y]: ");
                     
                     String crdB = leer.nextLine();
                     String[] lugarB = crdB.split(",");
@@ -84,7 +87,7 @@ public class Main {
                     int crdBx = Integer.parseInt(lugarB[0]);
                     int crdBy = Integer.parseInt(lugarB[1]);
                     
-                    System.out.print("Ingrese las coordenadas de C: ");
+                    System.out.print("Ingrese las coordenadas de C [x,y]: ");
                     
                     String crdC = leer.nextLine();
                     String[] lugarC = crdC.split(",");
@@ -92,7 +95,7 @@ public class Main {
                     int crdCx = Integer.parseInt(lugarC[0]);
                     int crdCy = Integer.parseInt(lugarC[1]);
                     
-                    System.out.print("Ingrese las coordenadas de D: ");
+                    System.out.print("Ingrese las coordenadas de D [x,y]: ");
                     
                     String crdD = leer.nextLine();
                     String[] lugarD = crdD.split(",");
@@ -100,11 +103,23 @@ public class Main {
                     int crdDx = Integer.parseInt(lugarD[0]);
                     int crdDy = Integer.parseInt(lugarD[1]);
                     
+                    Procesar4p Cuadrilatero = new Procesar4p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy);
+                    
+                    System.out.println("-------------------------------------------");
+                    System.out.println("Vértice AB: "+ Math.round(Cuadrilatero.verticeAB()));
+                    System.out.println("Vértice BC: "+ Math.round(Cuadrilatero.verticeBC()));
+                    System.out.println("Vértice CD: "+ Math.round(Cuadrilatero.verticeCD()));
+                    System.out.println("Vértice DA: "+ Math.round(Cuadrilatero.verticeDA()));
+                    System.out.println("-------------------------------------------");
+                    System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
+                    
+                    contFig+=1;
+                    
                 } else {
 
                     if (opc.equalsIgnoreCase("C")) {
                         System.out.println("Gracias por usar la aplicación.");
-                        System.out.println("-------------------------------------------");
+                        System.out.println("");
                         System.out.println("Cantidad de figuras ingresadas: "+ contFig);
                         System.out.println("-------------------------------------------");
                         break;
