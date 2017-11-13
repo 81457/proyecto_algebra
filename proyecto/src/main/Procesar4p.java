@@ -87,8 +87,24 @@ public class Procesar4p {
         return vcDA = Math.sqrt((calcX + calcY));
     }
 
-    public String muestraTipo() {
-            this.tipo = "Cuadrado.";
-        return tipo;
-    }
+//    public String muestraTipo() {
+//        if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
+//            this.tipo = "Cuadrado.";
+//        }else if(verticeAB() == verticeBC() && verticeCD() != verticeDA()){
+//            this.tipo = "Rectángulo.";
+//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
+//            this.tipo = "Rombo.";
+//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
+//            this.tipo = "Romboide.";
+//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
+//            this.tipo = "Trapecio.";
+//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
+//            this.tipo = "Trapezoide.";
+//        }
+//        return tipo;
+//    }
+    
+    
+    
+    
 }

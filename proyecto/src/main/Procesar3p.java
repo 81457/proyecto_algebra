@@ -14,6 +14,8 @@ public class Procesar3p {
     Point puntoB;
     Point puntoC;
     String tipo;
+    double semiperim;
+    double areaheron;
 
     public Procesar3p(int a, int b, int c, int d, int e, int f) {
         this.puntoA = new Point(a, b);
@@ -79,4 +81,15 @@ public class Procesar3p {
         }
         return tipo;
     }
+    
+    public double calculaPerimetro(){
+        this.semiperim = (verticeAB() + verticeCD() + verticeEF() / 2);
+        return Math.round(semiperim);
+    }
+    
+    public double calculaArea(){
+        this.areaheron = Math.sqrt(semiperim * (semiperim - verticeAB()) * (semiperim - verticeCD()) * (semiperim - verticeEF()));
+        return Math.round(areaheron);
+    }
+    
 }
