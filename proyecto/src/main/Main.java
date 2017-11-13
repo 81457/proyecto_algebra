@@ -1,5 +1,6 @@
 package main;
 
+import figura.Rombo;
 import java.util.Scanner;
 
 /**
@@ -26,10 +27,11 @@ public class Main {
             String opc = leer.nextLine();
             System.out.println("-------------------------------------------");
 
+            
             if (opc.equalsIgnoreCase("A")) {
                 System.out.println("-------------------------------");
                 System.out.print("Ingrese las coordenadas de A: ");
-                System.out.println("-------------------------------");
+                
 
                 String crdA = leer.nextLine();
                 String[] lugarA = crdA.split(",");
@@ -39,7 +41,7 @@ public class Main {
                 
                 System.out.println("--------------------------------");
                 System.out.print("Ingrese las coordenadas de B: ");
-                System.out.println("--------------------------------");
+                
 
                 String crdB = leer.nextLine();
                 String[] lugarB = crdB.split(",");
@@ -49,7 +51,7 @@ public class Main {
                 
                 System.out.println("---------------------------------");
                 System.out.print("Ingrese las coordenadas de C: ");
-                System.out.println("---------------------------------");
+                
 
                 String crdC = leer.nextLine();
                 String[] lugarC = crdC.split(",");
@@ -62,7 +64,7 @@ public class Main {
                 if (opc.equalsIgnoreCase("B")) {
                       
                     System.out.print("Ingrese las coordenadas de A: ");
-                    System.out.println("-------------------------------");
+                    
 
                     String crdA = leer.nextLine();
                     String[] lugarA = crdA.split(",");
@@ -72,7 +74,7 @@ public class Main {
                     
                     System.out.println("-------------------------------");
                     System.out.print("Ingrese las coordenadas de B: ");
-                    System.out.println("-------------------------------");
+                    
 
                     String crdB = leer.nextLine();
                     String[] lugarB = crdB.split(",");
@@ -82,7 +84,7 @@ public class Main {
                     
                     System.out.println("------------------------------");
                     System.out.print("Ingrese las coordenadas de C: ");
-                    System.out.println("-------------------------------");
+                    
 
                     String crdC = leer.nextLine();
                     String[] lugarC = crdC.split(",");
@@ -92,13 +94,16 @@ public class Main {
                     
                     System.out.println("------------------------------");
                     System.out.print("Ingrese las coordenadas de D: ");
-                    System.out.println("------------------------------");
+                    
 
                     String crdD = leer.nextLine();
                     String[] lugarD = crdD.split(",");
 
                     int crdDx = Integer.parseInt(lugarD[0]);
                     int crdDy = Integer.parseInt(lugarD[1]);
+                    
+                    Rombo obj= new Rombo();
+                    obj.rom();
 
                 } else {
 
