@@ -1,6 +1,5 @@
 package main;
 
-import figura.Rombo;
 import java.util.Scanner;
 
 /**
@@ -12,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        byte contFig = 0;
         Scanner leer = new Scanner(System.in);
 
         while (true) {
@@ -29,35 +29,40 @@ public class Main {
 
             
             if (opc.equalsIgnoreCase("A")) {
-                System.out.println("-------------------------------");
                 System.out.print("Ingrese las coordenadas de A: ");
                 
-
                 String crdA = leer.nextLine();
                 String[] lugarA = crdA.split(",");
 
                 int crdAx = Integer.parseInt(lugarA[0]);
                 int crdAy = Integer.parseInt(lugarA[1]);
                 
-                System.out.println("--------------------------------");
                 System.out.print("Ingrese las coordenadas de B: ");
                 
-
                 String crdB = leer.nextLine();
                 String[] lugarB = crdB.split(",");
 
                 int crdBx = Integer.parseInt(lugarB[0]);
                 int crdBy = Integer.parseInt(lugarB[1]);
                 
-                System.out.println("---------------------------------");
                 System.out.print("Ingrese las coordenadas de C: ");
                 
-
                 String crdC = leer.nextLine();
                 String[] lugarC = crdC.split(",");
 
                 int crdCx = Integer.parseInt(lugarC[0]);
                 int crdCy = Integer.parseInt(lugarC[1]);
+                
+                Procesar3p Triangulo = new Procesar3p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy);
+
+                System.out.println("-------------------------------------------");
+                System.out.println("Vértice AB: " + Math.round(Triangulo.verticeAB()));
+                System.out.println("Vértice CD: " + Math.round(Triangulo.verticeCD()));
+                System.out.println("Vértice EF: " + Math.round(Triangulo.verticeEF()));
+                System.out.println("-------------------------------------------");
+                System.out.println("El triángulo es de tipo: " + Triangulo.muestraTipo());
+                
+                contFig+=1;
 
             } else {
 
@@ -65,52 +70,42 @@ public class Main {
                       
                     System.out.print("Ingrese las coordenadas de A: ");
                     
-
                     String crdA = leer.nextLine();
                     String[] lugarA = crdA.split(",");
 
                     int crdAx = Integer.parseInt(lugarA[0]);
                     int crdAy = Integer.parseInt(lugarA[1]);
                     
-                    System.out.println("-------------------------------");
                     System.out.print("Ingrese las coordenadas de B: ");
                     
-
                     String crdB = leer.nextLine();
                     String[] lugarB = crdB.split(",");
 
                     int crdBx = Integer.parseInt(lugarB[0]);
                     int crdBy = Integer.parseInt(lugarB[1]);
                     
-                    System.out.println("------------------------------");
                     System.out.print("Ingrese las coordenadas de C: ");
                     
-
                     String crdC = leer.nextLine();
                     String[] lugarC = crdC.split(",");
 
                     int crdCx = Integer.parseInt(lugarC[0]);
                     int crdCy = Integer.parseInt(lugarC[1]);
                     
-                    System.out.println("------------------------------");
                     System.out.print("Ingrese las coordenadas de D: ");
                     
-
                     String crdD = leer.nextLine();
                     String[] lugarD = crdD.split(",");
 
                     int crdDx = Integer.parseInt(lugarD[0]);
                     int crdDy = Integer.parseInt(lugarD[1]);
                     
-                    Rombo obj= new Rombo();
-                    obj.rom();
-
                 } else {
 
                     if (opc.equalsIgnoreCase("C")) {
                         System.out.println("Gracias por usar la aplicación.");
                         System.out.println("-------------------------------------------");
-                        System.out.println("Cantidad de figuras ingresadas: ");
+                        System.out.println("Cantidad de figuras ingresadas: "+ contFig);
                         System.out.println("-------------------------------------------");
                         break;
                     }
