@@ -48,8 +48,8 @@ public class Procesar3p {
     }
 
     public double verticeAB() {
-        double calcX = Math.pow((getCAX() - getCBX()), 2);
-        double calcY = Math.pow((getCAY() - getCBY()), 2);
+        double calcX = Math.pow((getCBX() - getCAX()), 2);
+        double calcY = Math.pow((getCBY() - getCAY()), 2);
         double vcAB;
 
         return vcAB = Math.sqrt((calcX + calcY));

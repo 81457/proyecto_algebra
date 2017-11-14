@@ -59,8 +59,8 @@ public class Procesar4p {
     }
 
     public double verticeAB() {
-        double calcX = Math.pow((getCAX() - getCBX()), 2);
-        double calcY = Math.pow((getCAY() - getCBY()), 2);
+        double calcX = Math.pow((getCBX() - getCAX()), 2);
+        double calcY = Math.pow((getCBY() - getCAY()), 2);
         double vcAB;
 
         return vcAB = Math.sqrt((calcX + calcY));
@@ -75,8 +75,8 @@ public class Procesar4p {
     }
 
     public double verticeCD() {
-        double calcX = Math.pow((getCAX() - getCCX()), 2);
-        double calcY = Math.pow((getCAY() - getCCY()), 2);
+        double calcX = Math.pow((getCCX() - getCDX()), 2);
+        double calcY = Math.pow((getCCY() - getCDY()), 2);
         double vcCD;
 
         return vcCD = Math.sqrt((calcX + calcY));
@@ -93,9 +93,9 @@ public class Procesar4p {
     public String muestraTipo() {
         if (verticeAB() == verticeCD() && verticeBC() == verticeDA()) {
             if (getCAX() == getCCX() && getCAY() == getCCY()) {
-                this.tipo = "Cuadrado.";
+                this.tipo = "Rombo";
             } else {
-                this.tipo = "Rombo.";
+                this.tipo = "Cuadrado.";
             }
         } else if (verticeAB() == verticeCD() && verticeBC() == verticeDA()) {
             if (getCBX() == getCDX() && getCBX() == getCDY()) {
@@ -112,25 +112,25 @@ public class Procesar4p {
         }
         return tipo;
     }
-    
-    public int areaCuadrado(int lado){
+
+    public int areaCuadrado(int lado) {
         areaCua = lado * lado;
         return areaCua;
     }
-    
-    public int perimetroCuadrado(int lado){
+
+    public int perimetroCuadrado(int lado) {
         perimCua = 4 * lado;
         return perimCua;
     }
-    
-    public int areaRectangulo(int ladoA, int ladoB){
+
+    public int areaRectangulo(int ladoA, int ladoB) {
         areaRec = ladoA * ladoB;
         return areaRec;
     }
-    
-    public int perimetroRectangulo(int ladoA, int ladoB){
+
+    public int perimetroRectangulo(int ladoA, int ladoB) {
         perimRec = (2 * ladoA) + (2 * ladoB);
         return perimRec;
     }
-    
+
 }
