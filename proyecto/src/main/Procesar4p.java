@@ -7,7 +7,6 @@ import java.awt.Point;
  * @Autor Jorge A
  *
  */
-
 public class Procesar4p {
 
     Point puntoA;
@@ -15,12 +14,16 @@ public class Procesar4p {
     Point puntoC;
     Point puntoD;
     String tipo;
+    int areaCua;
+    int perimCua;
+    int areaRec;
+    int perimRec;
 
-    public Procesar4p(int a, int b, int c, int d, int e, int f, int g, int h) {
-        this.puntoA = new Point(a, b);
-        this.puntoB = new Point(c, d);
-        this.puntoC = new Point(e, f);
-        this.puntoD = new Point(g, h);
+    public Procesar4p(int ax, int ay, int bx, int by, int cx, int cy, int dx, int dy) {
+        this.puntoA = new Point(ax, ay);
+        this.puntoB = new Point(bx, by);
+        this.puntoC = new Point(cx, cy);
+        this.puntoD = new Point(dx, dy);
     }
 
     public double getCAX() {
@@ -87,24 +90,47 @@ public class Procesar4p {
         return vcDA = Math.sqrt((calcX + calcY));
     }
 
-//    public String muestraTipo() {
-//        if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
-//            this.tipo = "Cuadrado.";
-//        }else if(verticeAB() == verticeBC() && verticeCD() != verticeDA()){
-//            this.tipo = "Rectángulo.";
-//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
-//            this.tipo = "Rombo.";
-//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
-//            this.tipo = "Romboide.";
-//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
-//            this.tipo = "Trapecio.";
-//        }else if(verticeAB() == verticeBC() && verticeCD() == verticeDA()){
-//            this.tipo = "Trapezoide.";
-//        }
-//        return tipo;
-//    }
+    public String muestraTipo() {
+        if (verticeAB() == verticeCD() && verticeBC() == verticeDA()) {
+            if (getCAX() == getCCX() && getCAY() == getCCY()) {
+                this.tipo = "Cuadrado.";
+            } else {
+                this.tipo = "Rombo.";
+            }
+        } else if (verticeAB() == verticeCD() && verticeBC() == verticeDA()) {
+            if (getCBX() == getCDX() && getCBX() == getCDY()) {
+                this.tipo = "Rectángulo.";
+            }
+        } else if (verticeAB() == verticeCD() && verticeBC() != verticeDA()) {
+            this.tipo = "Trapecio.";
+        } else if (verticeAB() == verticeBC() && verticeCD() == verticeDA()) {
+            if (getCDX() == getCBX() && getCDY() == getCBY()) {
+                this.tipo = "Romboide.";
+            }
+        } else if (verticeAB() != verticeBC() && verticeCD() != verticeDA()) {
+            this.tipo = "Trapezoide.";
+        }
+        return tipo;
+    }
     
+    public int areaCuadrado(int lado){
+        areaCua = lado * lado;
+        return areaCua;
+    }
     
+    public int perimetroCuadrado(int lado){
+        perimCua = 4 * lado;
+        return perimCua;
+    }
     
+    public int areaRectangulo(int ladoA, int ladoB){
+        areaRec = ladoA * ladoB;
+        return areaRec;
+    }
+    
+    public int perimetroRectangulo(int ladoA, int ladoB){
+        perimRec = (2 * ladoA) + (2 * ladoB);
+        return perimRec;
+    }
     
 }

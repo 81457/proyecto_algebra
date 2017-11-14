@@ -113,7 +113,11 @@ public class Main {
                     System.out.println("Vértice CD: " + Math.round(Cuadrilatero.verticeCD()));
                     System.out.println("Vértice DA: " + Math.round(Cuadrilatero.verticeDA()));
                     System.out.println("-------------------------------------------");
-//                    System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
+                    System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
+                    System.out.println("-------------------------------------------");
+                    
+//                    TODO Agregar un if que diferencie que tipo de cuadrilatero es
+//                    para que pueda usar el método calculaperimetro/area de la fig.
 
                     contFig += 1;
 

@@ -17,10 +17,10 @@ public class Procesar3p {
     double semiperim;
     double areaheron;
 
-    public Procesar3p(int a, int b, int c, int d, int e, int f) {
-        this.puntoA = new Point(a, b);
-        this.puntoB = new Point(c, d);
-        this.puntoC = new Point(e, f);
+    public Procesar3p(int ax, int ay, int bx, int by, int cx, int cy) {
+        this.puntoA = new Point(ax, ay);
+        this.puntoB = new Point(bx, by);
+        this.puntoC = new Point(cx, cy);
     }
 
     public double getCAX() {
