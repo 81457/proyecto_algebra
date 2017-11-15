@@ -14,10 +14,6 @@ public class Procesar4p {
     Point puntoC;
     Point puntoD;
     String tipo;
-    int areaCua;
-    int perimCua;
-    int areaRec;
-    int perimRec;
 
     public Procesar4p(int ax, int ay, int bx, int by, int cx, int cy, int dx, int dy) {
         this.puntoA = new Point(ax, ay);
@@ -113,24 +109,71 @@ public class Procesar4p {
         return tipo;
     }
 
+    // Cuadrado
     public int areaCuadrado(int lado) {
-        areaCua = lado * lado;
+        int areaCua = lado * lado;
         return areaCua;
     }
 
     public int perimetroCuadrado(int lado) {
-        perimCua = 4 * lado;
+        int perimCua = 4 * lado;
         return perimCua;
     }
 
+    // Rectangulo
     public int areaRectangulo(int ladoA, int ladoB) {
-        areaRec = ladoA * ladoB;
+        int areaRec = ladoA * ladoB;
         return areaRec;
     }
 
     public int perimetroRectangulo(int ladoA, int ladoB) {
-        perimRec = (2 * ladoA) + (2 * ladoB);
+        int perimRec = (2 * ladoA) + (2 * ladoB);
         return perimRec;
+    }
+
+    // Rombo
+    public int areaRombo(int lado, int altura) {
+        int areaRom = lado * altura;
+        return areaRom;
+    }
+
+    public int perimetroRombo(int lado) {
+        int perimRom = 4 * lado;
+        return perimRom;
+    }
+
+    // Romboide
+    public int areaRomboide(int base, int altura) {
+        int areaRomide = base * altura;
+        return areaRomide;
+    }
+
+    public int perimetroRomboide(int ladoA, int ladoB) {
+        int perimRomide = (2 * ladoA) + (2 * ladoB);
+        return perimRomide;
+    }
+
+    // Trapecio
+    public int areaTrapecio(int ladoA, int ladoB, int altura) {
+        int areaTrap = altura * (ladoA + ladoB) / 2;
+        return areaTrap;
+    }
+
+    public int perimetroTrapecio(int ladoA, int ladoB, int ladoC, int ladoD) {
+        int perimTrap = ladoA + ladoB + ladoC + ladoD;
+        return perimTrap;
+    }
+
+    // Trapezoide
+    // TO DO intentar hacer un método para obtener dos triangulos del trapzde.
+//    public int areaTrapezoide(int a) {
+//        int areaTrapzde = 0;
+//        return areaTrapzde;
+//    }
+
+    public int perimetroTrapezoide(int ladoA, int ladoB, int ladoC, int ladoD) {
+        int perimTrapzde = ladoA + ladoB + ladoC + ladoD;
+        return perimTrapzde;
     }
 
 }
