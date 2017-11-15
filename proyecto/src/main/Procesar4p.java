@@ -97,17 +97,17 @@ public class Procesar4p {
             } else {
                 this.tipo = "Cuadrado.";
             }
-        } else if (verticeAB() == verticeCD() && verticeBC() == verticeDA()) {
+        } else if (verticeAB() == verticeCD() && verticeBC() == verticeDA() && verticeDA() != verticeBC()) {
             if (getCBX() == getCDX() && getCBX() == getCDY()) {
                 this.tipo = "Rectángulo.";
             }
         } else if (verticeAB() == verticeCD() && verticeBC() != verticeDA()) {
             this.tipo = "Trapecio.";
-        } else if (verticeAB() == verticeBC() && verticeCD() == verticeDA()) {
-            if (getCDX() == getCBX() && getCDY() == getCBY()) {
+        } else if (verticeAB() == verticeCD() && verticeBC() == verticeDA() && verticeDA() == verticeBC()) {
+            if (getCBX() == getCDX() && getCBX() == getCDY()) {
                 this.tipo = "Romboide.";
             }
-        } else if (verticeAB() != verticeBC() && verticeCD() != verticeDA()) {
+        } else if (verticeAB() != verticeBC() && verticeBC() != verticeDA()) {
             this.tipo = "Trapezoide.";
         }
         return tipo;
