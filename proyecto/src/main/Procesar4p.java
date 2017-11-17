@@ -9,11 +9,11 @@ import java.awt.Point;
  */
 public class Procesar4p {
 
-    Point puntoA;
-    Point puntoB;
-    Point puntoC;
-    Point puntoD;
-    String tipo;
+    private Point puntoA;
+    private Point puntoB;
+    private Point puntoC;
+    private Point puntoD;
+    private String tipo;
 
     public Procesar4p(int ax, int ay, int bx, int by, int cx, int cy, int dx, int dy) {
         this.puntoA = new Point(ax, ay);

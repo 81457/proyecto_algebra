@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         byte contFig = 0;
+        byte contErr = 0;
         int crdAx;
         int crdAy;
         int crdBx;
@@ -32,9 +33,6 @@ public class Main {
             System.out.println("B.- 4 Puntos.");
             System.out.println("C.- Salir.");
             System.out.println("-------------------------------------------");
-            System.out.println("Al ingresar coordenadas no olvide la coma.");
-            System.out.println("Ejemplo: [1,5]");
-            System.out.println("-------------------------------------------");
             System.out.print("Ingrese su opción: ");
             String opc = leer.nextLine();
             System.out.println("-------------------------------------------");
@@ -53,6 +51,7 @@ public class Main {
 
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
+                        contErr += 1;
                         continue;
                     }
 
@@ -67,6 +66,7 @@ public class Main {
 
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
+                        contErr += 1;
                         continue;
                     }
 
@@ -81,6 +81,7 @@ public class Main {
 
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
+                        contErr += 1;
                         continue;
                     }
 
@@ -119,6 +120,7 @@ public class Main {
 
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
+                            contErr += 1;
                             continue;
                         }
 
@@ -133,6 +135,7 @@ public class Main {
 
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
+                            contErr += 1;
                             continue;
                         }
 
@@ -147,6 +150,7 @@ public class Main {
 
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
+                            contErr += 1;
                             continue;
                         }
 
@@ -161,6 +165,7 @@ public class Main {
 
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
+                            contErr += 1;
                             continue;
                         }
 
@@ -174,11 +179,11 @@ public class Main {
                         System.out.println("-------------------------------------------");
                         System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
                         System.out.println("-------------------------------------------");
-
-//                    TODO Agregar un if que diferencie que tipo de cuadrilatero es
-//                    para que pueda usar el método calculaperimetro/area de la fig.
+                        
                         contFig += 1;
 
+                        break;
+                        
                     }
 
                 } else {
@@ -187,6 +192,7 @@ public class Main {
                         System.out.println("Gracias por usar la aplicación.");
                         System.out.println("");
                         System.out.println("Cantidad de figuras ingresadas: " + contFig);
+                        System.out.println("Cantidad de errores en ingreso: " + contErr);
                         System.out.println("-------------------------------------------");
                         break;
                     }

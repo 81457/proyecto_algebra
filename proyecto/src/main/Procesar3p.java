@@ -10,12 +10,12 @@ import java.awt.Point;
 
 public class Procesar3p {
 
-    Point puntoA;
-    Point puntoB;
-    Point puntoC;
-    String tipo;
-    double semiperim;
-    double areaheron;
+    private Point puntoA;
+    private Point puntoB;
+    private Point puntoC;
+    private String tipo;
+    private double semiperim;
+    private double areaheron;
 
     public Procesar3p(int ax, int ay, int bx, int by, int cx, int cy) {
         this.puntoA = new Point(ax, ay);
@@ -56,16 +56,16 @@ public class Procesar3p {
     }
 
     public double verticeCD() {
-        double calcX = Math.pow((getCBX() - getCCX()), 2);
-        double calcY = Math.pow((getCBY() - getCCY()), 2);
+        double calcX = Math.pow((getCCX() - getCBX()), 2);
+        double calcY = Math.pow((getCCY() - getCBY()), 2);
         double vcCD;
 
         return vcCD = Math.sqrt((calcX + calcY));
     }
 
     public double verticeEF() {
-        double calcX = Math.pow((getCAX() - getCCX()), 2);
-        double calcY = Math.pow((getCAY() - getCCY()), 2);
+        double calcX = Math.pow((getCCX() - getCAX()), 2);
+        double calcY = Math.pow((getCCY() - getCAY()), 2);
         double vcEF;
 
         return vcEF = Math.sqrt((calcX + calcY));
