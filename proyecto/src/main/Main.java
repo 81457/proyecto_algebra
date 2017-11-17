@@ -13,7 +13,7 @@ public class Main {
 
         byte contFig = 0;
         byte contErr = 0;
-        int crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy, vecTra;
+        int crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy, vecTra, vecTrb;
 
         Scanner leer = new Scanner(System.in);
 
@@ -112,7 +112,7 @@ public class Main {
                         String[] lugarT = t.split(",");
 
                         vecTra = Integer.parseInt(lugarT[0]);
-                        vecTra = Integer.parseInt(lugarT[1]);
+                        vecTrb = Integer.parseInt(lugarT[1]);
 
                         break;
 
@@ -122,6 +122,21 @@ public class Main {
                         continue;
                     }
                 }
+
+                int trasAx = (vecTra + crdAx);
+                int trasAy = (vecTrb + crdAy);
+                int trasBx = (vecTra + crdBx);
+                int trasBy = (vecTrb + crdBy);
+                int trasCx = (vecTra + crdCx);
+                int trasCy = (vecTrb + crdBy);
+
+                Procesar3p TrianguloT = new Procesar3p(trasAx, trasAy, trasBx, trasBy, trasCx, trasCy);
+
+                System.out.println("-------------------------------------------");
+                System.out.println("Vértice AB: " + Math.round(TrianguloT.verticeAB()));
+                System.out.println("Vértice CD: " + Math.round(TrianguloT.verticeCD()));
+                System.out.println("Vértice EF: " + Math.round(TrianguloT.verticeEF()));
+                System.out.println("-------------------------------------------");
 
             } else {
 
@@ -223,7 +238,7 @@ public class Main {
                             String[] lugarT = t.split(",");
 
                             vecTra = Integer.parseInt(lugarT[0]);
-                            vecTra = Integer.parseInt(lugarT[1]);
+                            vecTrb = Integer.parseInt(lugarT[1]);
 
                             break;
 
@@ -232,6 +247,24 @@ public class Main {
                             contErr += 1;
                         }
                     }
+
+                    int trasAx = (vecTra + crdAx);
+                    int trasAy = (vecTrb + crdAy);
+                    int trasBx = (vecTra + crdBx);
+                    int trasBy = (vecTrb + crdBy);
+                    int trasCx = (vecTra + crdCx);
+                    int trasCy = (vecTrb + crdBy);
+                    int trasDx = (vecTra + crdDx);
+                    int trasDy = (vecTrb + crdDy);
+
+                    Procesar4p CuadrilateroT = new Procesar4p(trasAx, trasAy, trasBx, trasBy, trasCx, trasCy, trasDx, trasDy);
+
+                    System.out.println("-------------------------------------------");
+                    System.out.println("Vértice AB: " + Math.round(CuadrilateroT.verticeAB()));
+                    System.out.println("Vértice BC: " + Math.round(CuadrilateroT.verticeBC()));
+                    System.out.println("Vértice CD: " + Math.round(CuadrilateroT.verticeCD()));
+                    System.out.println("Vértice DA: " + Math.round(CuadrilateroT.verticeDA()));
+                    System.out.println("-------------------------------------------");
 
                 } else {
 
