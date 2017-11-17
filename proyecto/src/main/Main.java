@@ -14,6 +14,9 @@ public class Main {
         byte contFig = 0;
         byte contErr = 0;
         int crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy, vecTra, vecTrb;
+        int contEqui = 0, contIsos = 0, contEsca = 0;
+        int contCuad = 0, contRect = 0, contRomb = 0, contRmid = 0;
+        int contTrap = 0, contTrpz = 0;
 
         Scanner leer = new Scanner(System.in);
 
@@ -100,6 +103,14 @@ public class Main {
 
                 contFig += 1;
 
+                if (Triangulo.muestraTipo().equals("Equilátero.")) {
+                    contEqui += 1;
+                } else if (Triangulo.muestraTipo().equals("Isosceles.")) {
+                    contIsos += 1;
+                } else if (Triangulo.muestraTipo().equals("Escaleno.")) {
+                    contEsca += 1;
+                }
+
                 System.out.println("-------------------------------------------");
                 System.out.println("Traslación de Figura");
                 System.out.println("-------------------------------------------");
@@ -136,7 +147,6 @@ public class Main {
                 System.out.println("Vértice AB: " + Math.round(TrianguloT.verticeAB()));
                 System.out.println("Vértice CD: " + Math.round(TrianguloT.verticeCD()));
                 System.out.println("Vértice EF: " + Math.round(TrianguloT.verticeEF()));
-                System.out.println("-------------------------------------------");
 
             } else {
 
@@ -226,6 +236,20 @@ public class Main {
 
                     contFig += 1;
 
+                    if (Cuadrilatero.muestraTipo().equals("Rombo.")) {
+                        contEqui += 1;
+                    } else if (Cuadrilatero.muestraTipo().equals("Cuadrado.")) {
+                        contCuad += 1;
+                    } else if (Cuadrilatero.muestraTipo().equals("Rectángulo.")) {
+                        contRect += 1;
+                    } else if (Cuadrilatero.muestraTipo().equals("Trapecio.")) {
+                        contTrap += 1;
+                    } else if (Cuadrilatero.muestraTipo().equals("Romboide.")) {
+                        contRmid += 1;
+                    } else if (Cuadrilatero.muestraTipo().equals("Trapezoide.")) {
+                        contTrpz += 1;
+                    }
+
                     System.out.println("-------------------------------------------");
                     System.out.println("Traslación de Figura");
                     System.out.println("-------------------------------------------");
@@ -264,15 +288,27 @@ public class Main {
                     System.out.println("Vértice BC: " + Math.round(CuadrilateroT.verticeBC()));
                     System.out.println("Vértice CD: " + Math.round(CuadrilateroT.verticeCD()));
                     System.out.println("Vértice DA: " + Math.round(CuadrilateroT.verticeDA()));
-                    System.out.println("-------------------------------------------");
 
                 } else {
 
                     if (opc.equalsIgnoreCase("C")) {
                         System.out.println("");
                         System.out.println("Gracias por usar la aplicación.");
-                        System.out.println("");
-                        System.out.println("Cantidad de figuras ingresadas: " + contFig);
+                        System.out.println("-------------------------------------------");
+                        System.out.println("Cantidad total de figuras ingresadas: " + contFig);
+                        System.out.println("-------------------------------------------");
+                        System.out.println("Cantidad de Triángulos Equiláteros: " + contEqui);
+                        System.out.println("Cantidad de Triángulos Isósceles: " + contIsos);
+                        System.out.println("Cantidad de Triángulos Escalenos: " + contEsca);
+                        System.out.println("-------------------------------------------");
+                        System.out.println("Cantidad de Cuadrados: " + contCuad);
+                        System.out.println("Cantidad de Rectángulos: " + contRect);
+                        System.out.println("Cantidad de Rombos: " + contRomb);
+                        System.out.println("Cantidad de Romboides: " + contRmid);
+                        System.out.println("-------------------------------------------");
+                        System.out.println("Cantidad de Trapecios: " + contTrap);
+                        System.out.println("Cantidad de Trapezoides: " + contTrpz);
+                        System.out.println("-------------------------------------------");
                         System.out.println("Cantidad de errores en ingreso: " + contErr);
                         System.out.println("-------------------------------------------");
                         break;

@@ -91,5 +91,5 @@ public class Procesar3p {
         this.areaheron = Math.sqrt(semiperim * (semiperim - verticeAB()) * (semiperim - verticeCD()) * (semiperim - verticeEF()));
         return Math.round(areaheron);
     }
-     
+        
 }
