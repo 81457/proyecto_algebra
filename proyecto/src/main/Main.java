@@ -13,14 +13,7 @@ public class Main {
 
         byte contFig = 0;
         byte contErr = 0;
-        int crdAx;
-        int crdAy;
-        int crdBx;
-        int crdBy;
-        int crdCx;
-        int crdCy;
-        int crdDx;
-        int crdDy;
+        int crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy, vecTra;
 
         Scanner leer = new Scanner(System.in);
 
@@ -49,12 +42,15 @@ public class Main {
                         crdAx = Integer.parseInt(lugarA[0]);
                         crdAy = Integer.parseInt(lugarA[1]);
 
+                        break;
+
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
                         contErr += 1;
-                        continue;
                     }
+                }
 
+                while (true) {
                     try {
                         System.out.print("Ingrese las coordenadas de B [x,y]: ");
 
@@ -64,12 +60,15 @@ public class Main {
                         crdBx = Integer.parseInt(lugarB[0]);
                         crdBy = Integer.parseInt(lugarB[1]);
 
+                        break;
+
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
                         contErr += 1;
-                        continue;
                     }
+                }
 
+                while (true) {
                     try {
                         System.out.print("Ingrese las coordenadas de C [x,y]: ");
 
@@ -79,28 +78,49 @@ public class Main {
                         crdCx = Integer.parseInt(lugarC[0]);
                         crdCy = Integer.parseInt(lugarC[1]);
 
+                        break;
+
+                    } catch (Exception e) {
+                        System.out.println("Error en el ingreso, reintente.");
+                        contErr += 1;
+                    }
+                }
+
+                Procesar3p Triangulo = new Procesar3p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy);
+
+                System.out.println("-------------------------------------------");
+                System.out.println("Vértice AB: " + Math.round(Triangulo.verticeAB()));
+                System.out.println("Vértice CD: " + Math.round(Triangulo.verticeCD()));
+                System.out.println("Vértice EF: " + Math.round(Triangulo.verticeEF()));
+                System.out.println("-------------------------------------------");
+                System.out.println("El triángulo es de tipo: " + Triangulo.muestraTipo());
+                System.out.println("-------------------------------------------");
+                System.out.println("Su área es: " + Triangulo.calculaArea());
+                System.out.println("Su perímetro es: " + Triangulo.calculaPerimetro());
+
+                contFig += 1;
+
+                System.out.println("-------------------------------------------");
+                System.out.println("Traslación de Figura");
+                System.out.println("-------------------------------------------");
+
+                while (true) {
+                    try {
+                        System.out.print("Ingrese el vector de traslación [x,y]: ");
+
+                        String t = leer.nextLine();
+                        String[] lugarT = t.split(",");
+
+                        vecTra = Integer.parseInt(lugarT[0]);
+                        vecTra = Integer.parseInt(lugarT[1]);
+
+                        break;
+
                     } catch (Exception e) {
                         System.out.println("Error en el ingreso, reintente.");
                         contErr += 1;
                         continue;
                     }
-
-                    Procesar3p Triangulo = new Procesar3p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy);
-
-                    System.out.println("-------------------------------------------");
-                    System.out.println("Vértice AB: " + Math.round(Triangulo.verticeAB()));
-                    System.out.println("Vértice CD: " + Math.round(Triangulo.verticeCD()));
-                    System.out.println("Vértice EF: " + Math.round(Triangulo.verticeEF()));
-                    System.out.println("-------------------------------------------");
-                    System.out.println("El triángulo es de tipo: " + Triangulo.muestraTipo());
-                    System.out.println("-------------------------------------------");
-                    System.out.println("Su área es: " + Triangulo.calculaArea());
-                    System.out.println("Su perímetro es: " + Triangulo.calculaPerimetro());
-
-                    contFig += 1;
-                    
-                    break;
-
                 }
 
             } else {
@@ -108,7 +128,6 @@ public class Main {
                 if (opc.equalsIgnoreCase("B")) {
 
                     while (true) {
-
                         try {
                             System.out.print("Ingrese las coordenadas de A [x,y]: ");
 
@@ -118,12 +137,15 @@ public class Main {
                             crdAx = Integer.parseInt(lugarA[0]);
                             crdAy = Integer.parseInt(lugarA[1]);
 
+                            break;
+
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
                             contErr += 1;
-                            continue;
                         }
+                    }
 
+                    while (true) {
                         try {
                             System.out.print("Ingrese las coordenadas de B [x,y]: ");
 
@@ -133,12 +155,15 @@ public class Main {
                             crdBx = Integer.parseInt(lugarB[0]);
                             crdBy = Integer.parseInt(lugarB[1]);
 
+                            break;
+
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
                             contErr += 1;
-                            continue;
                         }
+                    }
 
+                    while (true) {
                         try {
                             System.out.print("Ingrese las coordenadas de C [x,y]: ");
 
@@ -148,12 +173,15 @@ public class Main {
                             crdCx = Integer.parseInt(lugarC[0]);
                             crdCy = Integer.parseInt(lugarC[1]);
 
+                            break;
+
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
                             contErr += 1;
-                            continue;
                         }
+                    }
 
+                    while (true) {
                         try {
                             System.out.print("Ingrese las coordenadas de D [x,y]: ");
 
@@ -163,32 +191,52 @@ public class Main {
                             crdDx = Integer.parseInt(lugarD[0]);
                             crdDy = Integer.parseInt(lugarD[1]);
 
+                            break;
+
                         } catch (Exception e) {
                             System.out.println("Error en el ingreso, reintente.");
                             contErr += 1;
-                            continue;
                         }
+                    }
 
-                        Procesar4p Cuadrilatero = new Procesar4p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy);
+                    Procesar4p Cuadrilatero = new Procesar4p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy);
 
-                        System.out.println("-------------------------------------------");
-                        System.out.println("Vértice AB: " + Math.round(Cuadrilatero.verticeAB()));
-                        System.out.println("Vértice BC: " + Math.round(Cuadrilatero.verticeBC()));
-                        System.out.println("Vértice CD: " + Math.round(Cuadrilatero.verticeCD()));
-                        System.out.println("Vértice DA: " + Math.round(Cuadrilatero.verticeDA()));
-                        System.out.println("-------------------------------------------");
-                        System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
-                        System.out.println("-------------------------------------------");
-                        
-                        contFig += 1;
+                    System.out.println("-------------------------------------------");
+                    System.out.println("Vértice AB: " + Math.round(Cuadrilatero.verticeAB()));
+                    System.out.println("Vértice BC: " + Math.round(Cuadrilatero.verticeBC()));
+                    System.out.println("Vértice CD: " + Math.round(Cuadrilatero.verticeCD()));
+                    System.out.println("Vértice DA: " + Math.round(Cuadrilatero.verticeDA()));
+                    System.out.println("-------------------------------------------");
+                    System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
 
-                        break;
-                        
+                    contFig += 1;
+
+                    System.out.println("-------------------------------------------");
+                    System.out.println("Traslación de Figura");
+                    System.out.println("-------------------------------------------");
+
+                    while (true) {
+                        try {
+                            System.out.print("Ingrese el vector de traslación [x,y]: ");
+
+                            String t = leer.nextLine();
+                            String[] lugarT = t.split(",");
+
+                            vecTra = Integer.parseInt(lugarT[0]);
+                            vecTra = Integer.parseInt(lugarT[1]);
+
+                            break;
+
+                        } catch (Exception e) {
+                            System.out.println("Error en el ingreso, reintente.");
+                            contErr += 1;
+                        }
                     }
 
                 } else {
 
                     if (opc.equalsIgnoreCase("C")) {
+                        System.out.println("");
                         System.out.println("Gracias por usar la aplicación.");
                         System.out.println("");
                         System.out.println("Cantidad de figuras ingresadas: " + contFig);
