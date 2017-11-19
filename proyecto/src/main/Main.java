@@ -233,14 +233,21 @@ public class Main {
                     System.out.println("Vértice DA: " + Math.round(Cuadrilatero.verticeDA()));
                     System.out.println("-------------------------------------------");
                     System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
+                    System.out.println("-------------------------------------------");
 
                     contFig += 1;
 
                     if (Cuadrilatero.muestraTipo().equals("Rombo.")) {
+                        System.out.println("Su área es: " + Cuadrilatero.areaRombo());
+                        System.out.println("Su perímetro es: " + Cuadrilatero.perimetroRombo());
                         contEqui += 1;
                     } else if (Cuadrilatero.muestraTipo().equals("Cuadrado.")) {
+                        System.out.println("Su área es: " + Cuadrilatero.areaCuadrado());
+                        System.out.println("Su perímetro es: " + Cuadrilatero.perimetroCuadrado());
                         contCuad += 1;
                     } else if (Cuadrilatero.muestraTipo().equals("Rectángulo.")) {
+                        System.out.println("Su área es: " + Cuadrilatero.areaRectangulo());
+                        System.out.println("Su perímetro es: " + Cuadrilatero.perimetroRectangulo());
                         contRect += 1;
                     } else if (Cuadrilatero.muestraTipo().equals("Trapecio.")) {
                         contTrap += 1;

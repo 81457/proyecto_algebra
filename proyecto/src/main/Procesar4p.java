@@ -108,7 +108,65 @@ public class Procesar4p {
         }
         return tipo;
     }
-    
-    
-    
+
+    // Cuadrado
+    public double areaCuadrado() {
+        double areaCua = verticeAB() * verticeCD();
+        return areaCua;
+    }
+
+    public double perimetroCuadrado() {
+        double perimCua = 4 * verticeAB();
+        return perimCua;
+    }
+
+    // Rectangulo
+    public double areaRectangulo() {
+        double areaRec = verticeAB() * verticeBC();
+        return areaRec;
+    }
+
+    public double perimetroRectangulo() {
+        double perimRec = (2 * verticeAB()) + (2 * verticeBC());
+        return perimRec;
+    }
+
+    // Rombo
+    public double areaRombo() {
+        double areaRom = verticeAB() * verticeCD();
+        return areaRom;
+    }
+
+    public double perimetroRombo() {
+        double perimRom = 4 * verticeAB();
+        return perimRom;
+    }
+
+//    // Romboide
+//    public int areaRomboide(int base, int altura) {
+//        int areaRomide = base * altura;
+//        return areaRomide;
+//    }
+//
+//    public int perimetroRomboide(int ladoA, int ladoB) {
+//        int perimRomide = (2 * ladoA) + (2 * ladoB);
+//        return perimRomide;
+//    }
+//
+//    // Trapecio
+//    public int areaTrapecio(int ladoA, int ladoB, int altura) {
+//        int areaTrap = altura * (ladoA + ladoB) / 2;
+//        return areaTrap;
+//    }
+//
+//    public int perimetroTrapecio(int ladoA, int ladoB, int ladoC, int ladoD) {
+//        int perimTrap = ladoA + ladoB + ladoC + ladoD;
+//        return perimTrap;
+//    }
+//    // Trapezoide
+//
+//    public int perimetroTrapezoide(int ladoA, int ladoB, int ladoC, int ladoD) {
+//        int perimTrapzde = ladoA + ladoB + ladoC + ladoD;
+//        return perimTrapzde;
+//    }
 }
