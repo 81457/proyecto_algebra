@@ -92,9 +92,9 @@ public class Main {
                 Procesar3p Triangulo = new Procesar3p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy);
 
                 System.out.println("-------------------------------------------");
-                System.out.println("Vértice AB: " + Math.round(Triangulo.verticeAB()));
-                System.out.println("Vértice CD: " + Math.round(Triangulo.verticeCD()));
-                System.out.println("Vértice EF: " + Math.round(Triangulo.verticeEF()));
+                System.out.println("Vértice AB: " + Triangulo.verticeAB());
+                System.out.println("Vértice CD: " + Triangulo.verticeCD());
+                System.out.println("Vértice EF: " + Triangulo.verticeEF());
                 System.out.println("-------------------------------------------");
                 System.out.println("El triángulo es de tipo: " + Triangulo.muestraTipo());
                 System.out.println("-------------------------------------------");
@@ -144,9 +144,9 @@ public class Main {
                 Procesar3p TrianguloT = new Procesar3p(trasAx, trasAy, trasBx, trasBy, trasCx, trasCy);
 
                 System.out.println("-------------------------------------------");
-                System.out.println("Vértice AB: " + Math.round(TrianguloT.verticeAB()));
-                System.out.println("Vértice CD: " + Math.round(TrianguloT.verticeCD()));
-                System.out.println("Vértice EF: " + Math.round(TrianguloT.verticeEF()));
+                System.out.println("Vértice AB: " + TrianguloT.verticeAB());
+                System.out.println("Vértice CD: " + TrianguloT.verticeCD());
+                System.out.println("Vértice EF: " + TrianguloT.verticeEF());
 
             } else {
 
@@ -227,13 +227,12 @@ public class Main {
                     Procesar4p Cuadrilatero = new Procesar4p(crdAx, crdAy, crdBx, crdBy, crdCx, crdCy, crdDx, crdDy);
 
                     System.out.println("-------------------------------------------");
-                    System.out.println("Vértice AB: " + Math.round(Cuadrilatero.verticeAB()));
-                    System.out.println("Vértice BC: " + Math.round(Cuadrilatero.verticeBC()));
-                    System.out.println("Vértice CD: " + Math.round(Cuadrilatero.verticeCD()));
-                    System.out.println("Vértice DA: " + Math.round(Cuadrilatero.verticeDA()));
+                    System.out.println("Vértice AB: " + Cuadrilatero.verticeAB());
+                    System.out.println("Vértice BC: " + Cuadrilatero.verticeBC());
+                    System.out.println("Vértice CD: " + Cuadrilatero.verticeCD());
+                    System.out.println("Vértice DA: " + Cuadrilatero.verticeDA());
                     System.out.println("-------------------------------------------");
                     System.out.println("El cuadrilátero es de tipo: " + Cuadrilatero.muestraTipo());
-                    System.out.println("-------------------------------------------");
 
                     contFig += 1;
 
@@ -291,10 +290,10 @@ public class Main {
                     Procesar4p CuadrilateroT = new Procesar4p(trasAx, trasAy, trasBx, trasBy, trasCx, trasCy, trasDx, trasDy);
 
                     System.out.println("-------------------------------------------");
-                    System.out.println("Vértice AB: " + Math.round(CuadrilateroT.verticeAB()));
-                    System.out.println("Vértice BC: " + Math.round(CuadrilateroT.verticeBC()));
-                    System.out.println("Vértice CD: " + Math.round(CuadrilateroT.verticeCD()));
-                    System.out.println("Vértice DA: " + Math.round(CuadrilateroT.verticeDA()));
+                    System.out.println("Vértice AB: " + CuadrilateroT.verticeAB());
+                    System.out.println("Vértice BC: " + CuadrilateroT.verticeBC());
+                    System.out.println("Vértice CD: " + CuadrilateroT.verticeCD());
+                    System.out.println("Vértice DA: " + CuadrilateroT.verticeDA());
 
                 } else {
 

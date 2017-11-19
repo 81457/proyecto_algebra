@@ -84,12 +84,12 @@ public class Procesar3p {
     
     public double calculaPerimetro(){
         this.semiperim = (verticeAB() + verticeCD() + verticeEF() / 2);
-        return Math.round(semiperim);
+        return semiperim;
     }
     
     public double calculaArea(){
         this.areaheron = Math.sqrt(semiperim * (semiperim - verticeAB()) * (semiperim - verticeCD()) * (semiperim - verticeEF()));
-        return Math.round(areaheron);
+        return areaheron;
     }
         
 }
